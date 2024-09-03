@@ -1,0 +1,118 @@
+@charset "UTF_8";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font: Arial;
+}
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+div#pcard{
+    perspective: 800px;
+    background-color: rgb(56, 55, 55);
+}
+.card{
+    position: relative;
+    background-color: transparent;
+    height: 100vh;
+    padding: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 800ms;
+}
+.frontcard, .backcard{
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.534);
+}
+.frontcard{
+    background-color: rgb(95, 195, 143);
+    color: black;
+    border-radius: 15px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*#image{;
+    margin: 10px;
+    margin-left: 50px;
+
+}*/
+.frontcard{
+    background-image: url(../img/Tristeza-Flork-PNG.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 250px 270px;
+    background-attachment: fixed;
+}  
+#bth{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 1.7em;
+    text-align: right;
+    margin: 100px 130px 0px 10px;
+
+    
+}
+#bth2{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 1.7em;
+    text-align: right;
+    margin: 0px 30px 10px 10px;
+
+    
+}
+.backcard{
+    background-color: rgb(95, 195, 143);
+    color: black;
+    border-radius: 15px;
+    backface-visibility: hidden;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotateY(180deg);
+}
+h1{
+    font-family: cursive;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.txt{
+    margin: auto;
+    padding: 10px;
+    width:360px;
+    height: 50px;
+    font-family: cursive;
+    font-size: 1em;
+    text-align: justify;
+}
+.txt2{
+    margin: auto;
+    padding: 10px;
+    width:360px;
+    height: 20px;
+    font-family: cursive;
+    font-size: 0.77em;
+    text-align: justify;
+}
+#te{
+    margin: auto;
+    width:360px;
+    height: 10px;
+    font-family: cursive;
+    font-size: 1em;
+    text-align: justify;
+}
+#pcard:hover .card{
+    transform: rotateY(180deg);
+    
+}
